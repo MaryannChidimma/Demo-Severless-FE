@@ -1,0 +1,77 @@
+diff -ruN a/product-service/src/main/java/com/example/productservice/dto/ProductDto.java b/product-service/src/main/java/com/example/productservice/dto/ProductDto.java
+--- a/product-service/src/main/java/com/example/productservice/dto/ProductDto.java	2026-10-01 02:33:48
++++ b/product-service/src/main/java/com/example/productservice/dto/ProductDto.java	2026-10-01 02:33:48
+@@ -8,6 +8,8 @@
+     private String description;
+     private BigDecimal price;
+     private Integer stockQuantity;
++    private String imageUrl;
++    private String category;
+ 
+     public ProductDto() {}
+ 
+@@ -29,4 +31,8 @@
+     public void setPrice(BigDecimal price) { this.price = price; }
+     public Integer getStockQuantity() { return stockQuantity; }
+     public void setStockQuantity(Integer stockQuantity) { this.stockQuantity = stockQuantity; }
++    public String getImageUrl() { return imageUrl; }
++    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
++    public String getCategory() { return category; }
++    public void setCategory(String category) { this.category = category; }
+ }
+\ No newline at end of file
+diff -ruN a/product-service/src/main/java/com/example/productservice/model/ProductModel.java b/product-service/src/main/java/com/example/productservice/model/ProductModel.java
+--- a/product-service/src/main/java/com/example/productservice/model/ProductModel.java	2026-10-01 02:33:47
++++ b/product-service/src/main/java/com/example/productservice/model/ProductModel.java	2026-10-01 02:33:48
+@@ -14,6 +14,9 @@
+     private String description;
+     private BigDecimal price;
+     private Integer stockQuantity;
++    // Optional storefront fields; older documents simply have them null
++    private String imageUrl;
++    private String category;
+ 
+     public ProductModel() {}
+ 
+@@ -34,4 +37,8 @@
+     public void setPrice(BigDecimal price) { this.price = price; }
+     public Integer getStockQuantity() { return stockQuantity; }
+     public void setStockQuantity(Integer stockQuantity) { this.stockQuantity = stockQuantity; }
++    public String getImageUrl() { return imageUrl; }
++    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
++    public String getCategory() { return category; }
++    public void setCategory(String category) { this.category = category; }
+ }
+diff -ruN a/product-service/src/main/java/com/example/productservice/service/ProductService.java b/product-service/src/main/java/com/example/productservice/service/ProductService.java
+--- a/product-service/src/main/java/com/example/productservice/service/ProductService.java	2026-10-01 02:33:48
++++ b/product-service/src/main/java/com/example/productservice/service/ProductService.java	2026-10-01 02:33:48
+@@ -18,12 +18,18 @@
+     }
+ 
+     private ProductDto toDto(ProductModel product) {
+-        return new ProductDto(product.getId(), product.getName(), product.getDescription(),
++        ProductDto dto = new ProductDto(product.getId(), product.getName(), product.getDescription(),
+                 product.getPrice(), product.getStockQuantity());
++        dto.setImageUrl(product.getImageUrl());
++        dto.setCategory(product.getCategory());
++        return dto;
+     }
+ 
+     private ProductModel toEntity(ProductDto dto) {
+-        return new ProductModel(dto.getName(), dto.getDescription(), dto.getPrice(), dto.getStockQuantity());
++        ProductModel product = new ProductModel(dto.getName(), dto.getDescription(), dto.getPrice(), dto.getStockQuantity());
++        product.setImageUrl(dto.getImageUrl());
++        product.setCategory(dto.getCategory());
++        return product;
+     }
+ 
+     public List<ProductDto> getAllProducts() {
+@@ -51,6 +57,8 @@
+                     existing.setDescription(dto.getDescription());
+                     existing.setPrice(dto.getPrice());
+                     existing.setStockQuantity(dto.getStockQuantity());
++                    existing.setImageUrl(dto.getImageUrl());
++                    existing.setCategory(dto.getCategory());
+                     return toDto(productRepository.save(existing));
+                 })
+                 .orElse(null);
