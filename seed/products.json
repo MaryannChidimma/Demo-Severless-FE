@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Wireless Headphones",
+    "description": "Over-ear wireless headphones with soft cushioned ear cups, clear balanced sound and up to 30 hours of battery life. Folds flat for travel.",
+    "price": 89.99,
+    "stockQuantity": 42,
+    "category": "Electronics",
+    "imageUrl": "/images/products/wireless-headphones.jpg"
+  },
+  {
+    "name": "Smart Watch",
+    "description": "A slim smart watch with heart-rate tracking, notifications and a bright always-on display. Water resistant, with a week of battery in everyday use.",
+    "price": 129.99,
+    "stockQuantity": 18,
+    "category": "Electronics",
+    "imageUrl": "/images/products/smart-watch.jpg"
+  },
+  {
+    "name": "Wireless Mouse",
+    "description": "A compact wireless mouse with a comfortable contoured shape, quiet clicks and a receiver that stores inside the body.",
+    "price": 24.99,
+    "stockQuantity": 75,
+    "category": "Electronics",
+    "imageUrl": "/images/products/wireless-mouse.jpg"
+  },
+  {
+    "name": "Wireless Keyboard",
+    "description": "A low-profile wireless keyboard with quiet scissor keys and a full number row. Pairs with up to three devices.",
+    "price": 59.99,
+    "stockQuantity": 30,
+    "category": "Electronics",
+    "imageUrl": "/images/products/wireless-keyboard.jpg"
+  },
+  {
+    "name": "Scented Candle",
+    "description": "A hand-poured soy wax candle in a smoked glass jar, with notes of cedar and amber. Burns for around 40 hours.",
+    "price": 24.99,
+    "stockQuantity": 60,
+    "category": "Home & Living",
+    "imageUrl": "/images/products/scented-candle.jpg"
+  },
+  {
+    "name": "Desk Lamp",
+    "description": "An adjustable metal desk lamp with a weighted base and a matte grey finish. Takes a standard E27 bulb.",
+    "price": 49.99,
+    "stockQuantity": 22,
+    "category": "Home & Living",
+    "imageUrl": "/images/products/desk-lamp.jpg"
+  },
+  {
+    "name": "Potted Succulent",
+    "description": "A low-maintenance succulent in a glazed ceramic pot. Happy on a bright windowsill with water every couple of weeks.",
+    "price": 18.5,
+    "stockQuantity": 35,
+    "category": "Home & Living",
+    "imageUrl": "/images/products/potted-succulent.jpg"
+  },
+  {
+    "name": "Accent Armchair",
+    "description": "A button-tufted armchair with turned wooden legs and a deep, supportive seat. Arrives fully assembled.",
+    "price": 189.0,
+    "stockQuantity": 3,
+    "category": "Home & Living",
+    "imageUrl": "/images/products/accent-armchair.jpg"
+  },
+  {
+    "name": "Pendant Lamp",
+    "description": "A simple enamelled pendant lamp with a 1.5 m fabric cord. Works well over a dining table or kitchen counter.",
+    "price": 64.0,
+    "stockQuantity": 0,
+    "category": "Home & Living",
+    "imageUrl": "/images/products/pendant-lamp.jpg"
+  },
+  {
+    "name": "Insulated Water Bottle",
+    "description": "A 500 ml double-walled steel bottle that keeps drinks cold for 24 hours or hot for 12. Leak-proof screw cap.",
+    "price": 22.0,
+    "stockQuantity": 80,
+    "category": "Home & Living",
+    "imageUrl": "/images/products/insulated-bottle.jpg"
+  },
+  {
+    "name": "Classic White T-Shirt",
+    "description": "A regular-fit crew neck T-shirt in midweight organic cotton. Pre-washed so it keeps its shape.",
+    "price": 19.99,
+    "stockQuantity": 120,
+    "category": "Fashion",
+    "imageUrl": "/images/products/white-tshirt.jpg"
+  },
+  {
+    "name": "Leather Jacket",
+    "description": "A biker-style jacket in soft black leather with an asymmetric zip, quilted lining and three outer pockets.",
+    "price": 149.0,
+    "stockQuantity": 9,
+    "category": "Fashion",
+    "imageUrl": "/images/products/leather-jacket.jpg"
+  },
+  {
+    "name": "Everyday Backpack",
+    "description": "A 20-litre backpack in water-resistant canvas with a padded laptop sleeve and a quick-access front pocket.",
+    "price": 59.99,
+    "stockQuantity": 27,
+    "category": "Fashion",
+    "imageUrl": "/images/products/everyday-backpack.jpg"
+  },
+  {
+    "name": "Knit Poncho",
+    "description": "A lightweight open-knit poncho with a fringed hem, in undyed cotton. One size.",
+    "price": 45.0,
+    "stockQuantity": 14,
+    "category": "Fashion",
+    "imageUrl": "/images/products/knit-poncho.jpg"
+  },
+  {
+    "name": "Bomber Jacket",
+    "description": "A lightweight bomber jacket with ribbed cuffs and hem and a two-way zip, in a warm terracotta shade.",
+    "price": 79.0,
+    "stockQuantity": 16,
+    "category": "Fashion",
+    "imageUrl": "/images/products/bomber-jacket.jpg"
+  },
+  {
+    "name": "Vintage Classics Set",
+    "description": "A set of six clothbound classic novels, chosen for well-worn spines and good company on a shelf.",
+    "price": 34.99,
+    "stockQuantity": 12,
+    "category": "Books",
+    "imageUrl": "/images/products/classics-set.jpg"
+  },
+  {
+    "name": "Hardcover Novel",
+    "description": "A sewn-bound hardcover edition printed on cream paper, with a ribbon marker.",
+    "price": 16.99,
+    "stockQuantity": 48,
+    "category": "Books",
+    "imageUrl": "/images/products/hardcover-novel.jpg"
+  },
+  {
+    "name": "Paperback Bundle",
+    "description": "Three paperbacks picked by our team: one novel, one essay collection and one book of short stories.",
+    "price": 22.5,
+    "stockQuantity": 25,
+    "category": "Books",
+    "imageUrl": "/images/products/paperback-bundle.jpg"
+  },
+  {
+    "name": "Facial Serum",
+    "description": "A lightweight daily serum with hyaluronic acid and vitamin E, in a 30 ml amber glass dropper bottle.",
+    "price": 28.0,
+    "stockQuantity": 40,
+    "category": "Beauty",
+    "imageUrl": "/images/products/facial-serum.jpg"
+  },
+  {
+    "name": "Gentle Body Lotion",
+    "description": "A fragrance-free body lotion with oat extract for dry or sensitive skin. 200 ml tube.",
+    "price": 14.5,
+    "stockQuantity": 55,
+    "category": "Beauty",
+    "imageUrl": "/images/products/body-lotion.jpg"
+  },
+  {
+    "name": "Makeup Essentials Set",
+    "description": "An everyday set with a pressed powder, a blush, two lip colours and three brushes in a travel pouch.",
+    "price": 32.0,
+    "stockQuantity": 20,
+    "category": "Beauty",
+    "imageUrl": "/images/products/makeup-essentials.jpg"
+  }
+]
