@@ -1,0 +1,95 @@
+/* Design tokens. Every colour, size, radius and shadow in the app comes
+   from here; components never invent their own. */
+:root {
+  /* Colour */
+  --color-background: #f6f2ea; /* warm ivory page */
+  --color-surface: #ffffff; /* cards, inputs, panels */
+  --color-surface-muted: #efeae0; /* image wells, hovers, quiet fills */
+  --color-text: #1f2421; /* charcoal */
+  --color-muted: #5e655f; /* supporting text, 5.4:1 on the page */
+  --color-primary: #2f5d50; /* muted deep green: actions */
+  --color-primary-hover: #254a40;
+  --color-primary-soft: #e3ece7;
+  --color-on-primary: #ffffff;
+  --color-accent: #a9482f; /* terracotta: destructive, warnings only */
+  --color-accent-soft: #f7e8e2;
+  --color-border: #e4ddd0;
+  --color-border-strong: #cbc2b1;
+  --color-overlay: rgb(31 36 33 / 0.45);
+
+  /* Type */
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-xs: 0.75rem; /* metadata */
+  --text-sm: 0.875rem; /* supporting information */
+  --text-base: 1rem; /* body, product name, price */
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); /* section heading */
+  --text-2xl: clamp(1.5rem, 1.25rem + 1.2vw, 2rem); /* page heading */
+  --text-hero: clamp(1.75rem, 1.1rem + 2.9vw, 2.875rem);
+
+  /* Space */
+  --space-1: 4px;
+  --space-2: 8px; /* small */
+  --space-3: 12px;
+  --space-4: 16px; /* medium */
+  --space-5: 24px; /* large */
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-section: clamp(40px, 5vw, 72px);
+
+  /* Shape */
+  --radius-sm: 6px; /* buttons, inputs */
+  --radius: 10px; /* cards, panels */
+  --radius-lg: 14px; /* hero, large surfaces */
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px rgb(31 36 33 / 0.06);
+  --shadow-md: 0 10px 30px rgb(31 36 33 / 0.12); /* menus, drawers, toasts */
+
+  /* Layout */
+  --control-height: 44px;
+  --header-height: 60px;
+  --bottom-nav-height: 60px;
+  --gutter: 16px;
+  --container-max: 100%;
+
+  --transition: 150ms ease;
+}
+
+/* Large mobile and tablet */
+@media (min-width: 640px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+
+/* The bottom tab bar is phone-only. */
+@media (min-width: 768px) {
+  :root {
+    --bottom-nav-height: 0px;
+  }
+}
+
+/* Compact desktop: 1024px viewport → 960px of content */
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 32px;
+    --header-height: 72px;
+  }
+}
+
+/* Desktop and up: content stops growing and the margins take the rest. */
+@media (min-width: 1280px) {
+  :root {
+    --container-max: 1160px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --container-max: 1400px;
+  }
+}
