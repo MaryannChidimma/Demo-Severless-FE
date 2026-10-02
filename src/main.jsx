@@ -8,6 +8,7 @@ import './styles/layout.css'
 import './styles/components.css'
 import './styles/pages.css'
 import App from './App'
+import ErrorBoundary from './components/ErrorBoundary'
 import { CartProvider } from './context/CartContext'
 import { FavouritesProvider } from './context/FavouritesContext'
 import { ProductsProvider } from './context/ProductsContext'
@@ -17,17 +18,19 @@ import { ToastProvider } from './context/ToastContext'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <SessionProvider>
-        <ProductsProvider>
-          <CartProvider>
-            <FavouritesProvider>
-              <ToastProvider>
-                <App />
-              </ToastProvider>
-            </FavouritesProvider>
-          </CartProvider>
-        </ProductsProvider>
-      </SessionProvider>
+      <ErrorBoundary>
+        <SessionProvider>
+          <ProductsProvider>
+            <CartProvider>
+              <FavouritesProvider>
+                <ToastProvider>
+                  <App />
+                </ToastProvider>
+              </FavouritesProvider>
+            </CartProvider>
+          </ProductsProvider>
+        </SessionProvider>
+      </ErrorBoundary>
     </BrowserRouter>
   </StrictMode>,
 )

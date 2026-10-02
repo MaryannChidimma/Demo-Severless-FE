@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import BottomNavigation from '../components/BottomNavigation'
+import ErrorBoundary from '../components/ErrorBoundary'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import MobileHeader from '../components/MobileHeader'
@@ -23,7 +24,9 @@ export default function AppLayout() {
       <Header />
       <MobileHeader />
       <main id="main" className="app__main" tabIndex={-1}>
-        <Outlet />
+        <ErrorBoundary resetKey={pathname}>
+          <Outlet />
+        </ErrorBoundary>
       </main>
       <Footer />
       <BottomNavigation />
