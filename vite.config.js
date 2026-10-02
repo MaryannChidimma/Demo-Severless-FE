@@ -23,9 +23,12 @@ export default defineConfig(({ mode }) => {
     '/api/orders': to(orders),
   }
 
+  // Public tunnels used for demos (a leading dot allows every subdomain)
+  const allowedHosts = ['.trycloudflare.com', '.ngrok-free.app']
+
   return {
     plugins: [react()],
-    server: { proxy },
-    preview: { proxy },
+    server: { proxy, allowedHosts },
+    preview: { proxy, allowedHosts },
   }
 })
