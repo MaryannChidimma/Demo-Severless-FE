@@ -39,7 +39,7 @@ export default function Checkout() {
   const [step, setStep] = useState(0)
   const [address, setAddress] = useState(null)
   const [placing, setPlacing] = useState(false)
-  const [orderFailed, setOrderFailed] = useState(false)
+  const [orderError, setOrderError] = useState(null)
   const heading = useRef(null)
 
   // Move focus to the new step's heading so keyboard and screen-reader
@@ -83,14 +83,15 @@ export default function Checkout() {
   }
 
   async function handlePlaceOrder() {
+    if (placing) return
     setPlacing(true)
-    setOrderFailed(false)
+    setOrderError(null)
     try {
       const order = await placeOrder(user.id)
       navigate(`/order/${order.id}`, { replace: true, state: { justPlaced: true } })
       cart.refresh()
-    } catch {
-      setOrderFailed(true)
+    } catch (err) {
+      setOrderError(err.message)
       setPlacing(false)
     }
   }
@@ -149,8 +150,10 @@ export default function Checkout() {
               <h2 id="step-title" ref={heading} tabIndex={-1}>
                 Review your order
               </h2>
-              {orderFailed && (
-                <Notice tone="error">We couldn't place your order. Nothing has been charged — please try again.</Notice>
+              {orderError && (
+                <Notice tone="error">
+                  We couldn't place your order: {orderError} Your cart is unchanged and nothing has been charged.
+                </Notice>
               )}
 
               <dl className="review">
